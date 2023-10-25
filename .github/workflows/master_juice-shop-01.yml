@@ -20,6 +20,11 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: '18.x'
+      
+      - name: add env
+        run: |
+          touch .env
+          echo PORT=8000 >> .env
 
       - name: npm install, build
         run: |
